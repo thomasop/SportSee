@@ -1,3 +1,35 @@
 @import "../utils/variables";
 
 /* Style for home page */
+
+.home {
+    &__section {
+        text-align: center;
+        margin-top: 100px;
+    }
+    &__h1 {
+        margin-bottom: 50px;
+        font-size: 28px;
+    }
+    &__div {
+        display: flex;
+        flex-direction: column;
+    }
+    &__link {
+        color: white;
+        width: 90px;
+        margin: auto;
+        text-decoration: none;
+        font-size: 18px;
+        background-color: #E60000;
+        padding: 10px 0px;
+        border-radius: 10px;
+        transition: all 500ms;
+        &--margin {
+            margin-top: 20px;
+        }
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+}

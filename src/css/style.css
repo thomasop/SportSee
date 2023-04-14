@@ -108,6 +108,36 @@ html, body {
 }
 /* Variable for color and animation duration */
 /* Style for home page */
+.home__section {
+  text-align: center;
+  margin-top: 100px;
+}
+.home__h1 {
+  margin-bottom: 50px;
+  font-size: 28px;
+}
+.home__div {
+  display: flex;
+  flex-direction: column;
+}
+.home__link {
+  color: white;
+  width: 90px;
+  margin: auto;
+  text-decoration: none;
+  font-size: 18px;
+  background-color: #E60000;
+  padding: 10px 0px;
+  border-radius: 10px;
+  transition: all 500ms;
+}
+.home__link--margin {
+  margin-top: 20px;
+}
+.home__link:hover {
+  transform: scale(1.2);
+}
+
 /* Variable for color and animation duration */
 /* Style for menu page */
 
