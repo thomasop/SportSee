@@ -1,3 +1,50 @@
 @import "../utils/mixins";
 
 /* Footer tag */
+
+@include desktopmini {
+    .side-nav {
+        background-color: black;
+        width: 117px;
+        height: calc(100% - 91px);
+        position: absolute;
+        display: flex;
+        top: 91px;
+        align-items: center;
+        &__maindiv {
+            max-width: 100%;
+        }
+        &__div {
+            display: flex;
+            flex-direction: column;
+            margin: auto;
+            align-items: center;
+        }
+        &__img {
+            width: 64px;
+            height: 64px;
+            &--margin {
+                margin-bottom: 20px;
+            }
+        }
+        &__divtwo {
+            position: relative;
+            bottom: 0;
+            margin-bottom: 60px;
+        }
+        &__p {
+            color: white;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 24px;
+            transform: rotate(-90deg);
+            width: 200px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            bottom: -160px;
+            right: 40px;
+        }
+    }
+}

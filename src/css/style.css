@@ -60,6 +60,52 @@ html, body {
 }
 /* Maps for responsive device */
 /* Mixins for responsive device */ /* Footer tag */
+@media screen and (min-width: 1024px) and (min-height: 780px) {
+  .side-nav {
+    background-color: black;
+    width: 117px;
+    height: calc(100% - 91px);
+    position: absolute;
+    display: flex;
+    top: 91px;
+    align-items: center;
+  }
+  .side-nav__maindiv {
+    max-width: 100%;
+  }
+  .side-nav__div {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    align-items: center;
+  }
+  .side-nav__img {
+    width: 64px;
+    height: 64px;
+  }
+  .side-nav__img--margin {
+    margin-bottom: 20px;
+  }
+  .side-nav__divtwo {
+    position: relative;
+    bottom: 0;
+    margin-bottom: 60px;
+  }
+  .side-nav__p {
+    color: white;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 24px;
+    transform: rotate(-90deg);
+    width: 200px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    bottom: -160px;
+    right: 40px;
+  }
+}
 /* Variable for color and animation duration */
 /* Style for home page */
 /* Variable for color and animation duration */
