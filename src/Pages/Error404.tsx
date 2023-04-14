@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import Header from "../Components/Header";
 
-const Error404 = () => {
+const Error404: React.FC = () => {
   return (
-    <div>Error404</div>
-  )
-}
+    <>
+      <Header />
+    </>
+  );
+};
 
-export default Error404
+export default Error404;

@@ -7,6 +7,7 @@ import Profil from "./Pages/Profil";
 import Settings from "./Pages/Settings";
 import Community from "./Pages/Community";
 import Error404 from "./Pages/Error404";
+import "./css/style.css"
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement

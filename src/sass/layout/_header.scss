@@ -1,0 +1,41 @@
+@import "../utils/mixins";
+
+/* Header tag */
+
+@include desktopmini {
+    .header {
+        display: flex;
+        position: relative;
+        z-index: 1;
+        background-color: black;
+        height: 91px;
+        width: 100%;
+        min-width: 100%;
+        &__img {
+            width: 178px;
+            height: 60px;
+            margin-left: 28px;
+        }
+        &__nav {
+            width: 100%;
+            display: flex;
+            align-items: center;
+        }
+        &__ul {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+        }
+        &__li {
+            list-style-type: none;
+        }
+        &__a {
+            text-decoration: none;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 24px;
+            color: white;
+        }
+    }
+}

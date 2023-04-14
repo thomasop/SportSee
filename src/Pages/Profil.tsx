@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import Header from "../Components/Header";
 
-const Profil = () => {
+const Profil: React.FC = () => {
   return (
-    <div>Profil</div>
-  )
-}
+    <>
+      <Header />
+    </>
+  );
+};
 
-export default Profil
+export default Profil;

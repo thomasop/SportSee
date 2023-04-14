@@ -1,0 +1,9 @@
+@import "./maps";
+
+/* Mixins for responsive device */
+
+@mixin desktopmini {
+    @media screen and (min-width: map-get($break, desktopwidth)) and (min-height: map-get($break, desktopheight)) {
+        @content
+    }
+}

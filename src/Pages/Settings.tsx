@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import Header from "../Components/Header";
 
-const Settings = () => {
+const Settings: React.FC = () => {
   return (
-    <div>Settings</div>
-  )
-}
+    <>
+      <Header />
+    </>
+  );
+};
 
-export default Settings
+export default Settings;

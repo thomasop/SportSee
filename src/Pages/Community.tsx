@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import Header from "../Components/Header";
 
-const Community = () => {
+const Community: React.FC = () => {
   return (
-    <div>Community</div>
-  )
-}
+    <>
+      <Header />
+    </>
+  );
+};
 
-export default Community
+export default Community;
