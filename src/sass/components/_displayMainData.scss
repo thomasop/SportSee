@@ -1,0 +1,27 @@
+@import "../utils/mixins";
+
+/* DisplayMainData component */
+
+.display {
+    margin-left: 224px;
+    margin-top: 68px;
+    &__h1 {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 48px;
+        line-height: 24px;
+    }
+    &__span {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 48px;
+        line-height: 24px;
+        color: #FF0101;
+    }
+    &__p {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 24px;
+    }
+}
