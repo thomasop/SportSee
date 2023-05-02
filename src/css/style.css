@@ -282,6 +282,214 @@ main {
     font-size: 16px;
   }
 }
+/* Maps for responsive device */
+/* Mixins for responsive device */ /* DisplayLine component */
+.custom-tooltip-line {
+  background-color: white;
+  position: absolute;
+  width: 40px;
+  z-index: 1;
+  padding: 7px;
+}
+
+.custom-tooltip-line-middle {
+  background-color: white;
+  position: absolute;
+  width: 40px;
+  z-index: 1;
+  padding: 7px;
+  left: 40px;
+}
+
+.custom-tooltip-line-friday {
+  background-color: white;
+  position: absolute;
+  width: 40px;
+  z-index: 1;
+  padding: 7px;
+  left: 35px;
+}
+
+.custom-tooltip-line-last {
+  background-color: white;
+  position: absolute;
+  width: 40px;
+  z-index: 1;
+  padding: 7px;
+  left: 40px;
+}
+
+.label-line {
+  font-size: 8px;
+  line-height: 24px;
+}
+
+@media screen and (min-width: 1024px) and (max-height: 940px) {
+  .custom-tooltip-line-back-last {
+    height: 180px;
+  }
+  .custom-tooltip-line-back {
+    height: 180px;
+  }
+  .custom-tooltip-line-back-friday {
+    height: 180px;
+  }
+  .custom-tooltip-line-back-middle {
+    height: 180px;
+  }
+}
+@media screen and (min-width: 1036px) {
+  .custom-tooltip-line-back-friday {
+    right: 10px !important;
+  }
+  .custom-tooltip-line-friday {
+    left: unset;
+  }
+}
+@media screen and (min-width: 1293px) and (max-width: 1900px) {
+  .saturday-back {
+    right: -10px !important;
+  }
+  .saturday {
+    left: 40px !important;
+  }
+}
+@media screen and (min-width: 1905px) {
+  .saturday-back {
+    right: 10px !important;
+  }
+  .saturday {
+    left: unset;
+  }
+}
+@media screen and (min-width: 1290px) {
+  .wednesday-back {
+    right: 10px !important;
+  }
+  .wednesday {
+    left: unset;
+  }
+}
+@media screen and (min-width: 1440px) and (max-height: 940px) {
+  .custom-tooltip-line-back-last {
+    height: 180px;
+  }
+  .custom-tooltip-line-back {
+    height: 180px;
+  }
+  .custom-tooltip-line-back-friday {
+    height: 180px;
+  }
+  .custom-tooltip-line-back-middle {
+    height: 180px;
+  }
+}
+@media screen and (min-width: 1574px) {
+  .custom-tooltip-line-middle {
+    background-color: white;
+    position: absolute;
+    width: 40px;
+    z-index: 1;
+    padding: 7px;
+    left: 0px;
+  }
+  .custom-tooltip-line-back-middle {
+    right: 10px !important;
+  }
+}
+@media screen and (min-width: 1024px) and (min-height: 940px) {
+  .custom-tooltip-line-back {
+    height: 200px;
+  }
+  .custom-tooltip-line-back-friday {
+    height: 200px;
+  }
+  .custom-tooltip-line-back-middle {
+    height: 200px;
+  }
+  .custom-tooltip-line-back-last {
+    height: 200px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .lineChart__title {
+    font-size: 12px;
+    color: white;
+    margin-left: 1%;
+    position: absolute;
+    width: 110px;
+  }
+  .custom-tooltip-line-back {
+    background-color: #E60000;
+    opacity: 0.7;
+    width: 80px;
+    position: relative;
+    right: 10px;
+  }
+  .custom-tooltip-line-back-friday {
+    background-color: #E60000;
+    opacity: 0.7;
+    width: 80px;
+    position: relative;
+    right: -6px;
+  }
+  .custom-tooltip-line-back-middle {
+    background-color: #E60000;
+    opacity: 0.7;
+    width: 80px;
+    position: relative;
+    right: -10px;
+  }
+  .custom-tooltip-line-back-last {
+    background-color: #E60000;
+    opacity: 0.7;
+    width: 80px;
+    position: relative;
+    right: -10px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .lineChart__title {
+    font-size: 16px;
+    width: 170px;
+  }
+}
+@media screen and (min-width: 1024px) and (min-height: 1300px) {
+  .custom-tooltip-line-back {
+    height: 280px;
+    right: 10px;
+  }
+  .custom-tooltip-line-back-middle {
+    height: 280px;
+    right: -10px;
+  }
+  .custom-tooltip-line-back-friday {
+    height: 280px;
+    right: -10px;
+  }
+  .custom-tooltip-line-back-last {
+    height: 280px;
+    right: -10px;
+  }
+}
+@media screen and (min-width: 1440px) and (min-height: 1300px) {
+  .custom-tooltip-line-back {
+    height: 280px;
+    right: 10px;
+  }
+  .custom-tooltip-line-back-middle {
+    height: 280px;
+    right: -10px;
+  }
+  .custom-tooltip-line-back-friday {
+    height: 280px;
+    right: -10px;
+  }
+  .custom-tooltip-line-back-last {
+    height: 280px;
+    right: -10px;
+  }
+}
 /* Variable for color and animation duration */
 /* Style for home page */
 .home__section {

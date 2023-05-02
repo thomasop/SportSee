@@ -3,6 +3,7 @@ import Header from "../Components/Header";
 import SideNav from "../Components/SideNav";
 import DisplayMainData from "../Components/Data/DisplayMainData";
 import DisplayActivityData from "../Components/Data/DisplayActivityData";
+import DisplayAverageData from "../Components/Data/DisplayAverageData";
 
 const Dashboard: React.FC = () => {
   return (
@@ -20,6 +21,7 @@ const Dashboard: React.FC = () => {
               </div>
               <div className="dashboard__flex">
                 <div className="dashboard__flex--average">
+                  <DisplayAverageData />
                 </div>
                 <div className="dashboard__flex--performance">
                 </div>
