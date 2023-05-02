@@ -4,10 +4,7 @@ import { GetDataMain } from "../../Service/GetData";
 import { MainType } from "../../Type/data/UserMain";
 import DisplayKeyData from "./DisplayKeyData";
 import DisplayRadial from "../Chart/DisplayRadial";
-
-interface proptype {
-  type: string;
-}
+import { DisplayMainDataProptype } from "../../Type/proptype/PropTypes";
 
 let ar: string[][] = [
   ["calorieCount", "kcal", "calories-icon.png", "Calories"],
@@ -16,7 +13,13 @@ let ar: string[][] = [
   ["lipidCount", "g", "fat-icon.png", "Lipides"],
 ];
 
-const DisplayMainData: React.FC<proptype> = ({ type }) => {
+/**
+ * React component - Get main data from service and display main data, radial chart or keyData
+ * @param {DisplayMainDataProptype} Props
+ * @param {string} Props.type
+ * @return {JSX.Element}
+ */
+const DisplayMainData = ({ type }: DisplayMainDataProptype): JSX.Element => {
   const { id } = useParams();
   const [data, setData] = useState<null | MainType>(null);
   return (

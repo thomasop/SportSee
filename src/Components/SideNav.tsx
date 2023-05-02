@@ -24,7 +24,11 @@ const SideNav = (): JSX.Element => {
             src="../assets/sideNav/iconbike.png"
             alt=""
           />
-          <img className="side-nav__img" src="../assets/sideNav/iconwork.png" alt="" />
+          <img
+            className="side-nav__img"
+            src="../assets/sideNav/iconwork.png"
+            alt=""
+          />
         </div>
       </div>
       <div className="side-nav__divtwo">

@@ -2,7 +2,11 @@ import React from "react";
 import Header from "../Components/Header";
 import { Link } from "react-router-dom";
 
-const Home: React.FC = () => {
+/**
+ * React component - Home page
+ * @return {JSX.Element}
+ */
+const Home = (): JSX.Element => {
   return (
     <>
       <Header />

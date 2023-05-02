@@ -17,10 +17,17 @@ import {
 import { DisplayBarProptype } from "../../Type/proptype/PropTypes";
 import { NewActivityData } from "../../Type/data/UserActivity";
 
+/**
+ * Function - Custom tool tip
+ * @param {TooltipProps<ValueType, NameType>} Props
+ * @param {boolean | undefined} Props.active
+ * @param {Payload<ValueType, NameType>[] | undefined} Props.payload
+ * @return {JSX.Element | null}
+ */
 const CustomTooltip = ({
   active,
-  payload
-}: TooltipProps<ValueType, NameType>) => {
+  payload,
+}: TooltipProps<ValueType, NameType>): JSX.Element | null => {
   if (active && payload && payload.length) {
     return (
       <div className="custom-tooltip">
@@ -33,6 +40,12 @@ const CustomTooltip = ({
   return null;
 };
 
+/**
+ * React component - Display bar chart
+ * @param {DisplayBarProptype} Props
+ * @param {ActivityType | null} Props.data
+ * @return {JSX.Element}
+ */
 const DisplayBar = ({ data }: DisplayBarProptype): JSX.Element => {
   const [test, setTest] = useState<undefined | NewActivityData[]>(undefined);
   useEffect(() => {

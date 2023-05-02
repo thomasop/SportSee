@@ -2,7 +2,11 @@ import React from "react";
 import Header from "../Components/Header";
 import Construct from "../Components/Construct";
 
-const Error404: React.FC = () => {
+/**
+ * React component - Error404 page
+ * @return {JSX.Element}
+ */
+const Error404 = (): JSX.Element => {
   return (
     <>
       <Header />

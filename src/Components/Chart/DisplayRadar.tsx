@@ -9,8 +9,16 @@ import {
 import { DisplayRadarProptype } from "../../Type/proptype/PropTypes";
 import { NewPerformanceData } from "../../Type/data/UserPerformance";
 
+/**
+ * React component - Display radar chart
+ * @param {DisplayRadarProptype} Props
+ * @param {PerformanceType | null} Props.data
+ * @return {JSX.Element}
+ */
 const DisplayRadar = ({ data }: DisplayRadarProptype): JSX.Element => {
-  const [newData, setNewData] = useState<undefined | NewPerformanceData[]>(undefined);
+  const [newData, setNewData] = useState<undefined | NewPerformanceData[]>(
+    undefined
+  );
   useEffect(() => {
     if (data) {
       const ar = [
@@ -24,7 +32,7 @@ const DisplayRadar = ({ data }: DisplayRadarProptype): JSX.Element => {
       let setData = data.data.reverse().map((d, index) => {
         return {
           id: ar[index],
-          ...d
+          ...d,
         };
       });
       setNewData(setData);
@@ -49,7 +57,7 @@ const DisplayRadar = ({ data }: DisplayRadarProptype): JSX.Element => {
               />
               <Radar
                 name="Mike"
-                dataKey="value"
+                dataKey="kind"
                 fill="#FF0101"
                 fillOpacity={0.6}
               />

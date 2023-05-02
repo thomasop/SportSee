@@ -6,7 +6,11 @@ import DisplayActivityData from "../Components/Data/DisplayActivityData";
 import DisplayAverageData from "../Components/Data/DisplayAverageData";
 import DisplayPerformanceData from "../Components/Data/DisplayPerformanceData";
 
-const Dashboard: React.FC = () => {
+/**
+ * React component - Dashboard page
+ * @return {JSX.Element}
+ */
+const Dashboard = (): JSX.Element => {
   return (
     <>
       <Header />

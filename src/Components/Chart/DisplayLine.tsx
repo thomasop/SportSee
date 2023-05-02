@@ -14,9 +14,16 @@ import {
 import { NewAverageData } from "../../Type/data/UserAverageSessions";
 import { DisplayLineProptype } from "../../Type/proptype/PropTypes";
 
+/**
+ * Function - Custom tool tip
+ * @param {TooltipProps<ValueType, NameType>} Props
+ * @param {boolean | undefined} Props.active
+ * @param {Payload<ValueType, NameType>[] | undefined} Props.payload
+ * @return {JSX.Element | null}
+ */
 const CustomTooltip = ({
   active,
-  payload
+  payload,
 }: TooltipProps<ValueType, NameType>): JSX.Element | null => {
   if (active && payload && payload.length) {
     if (payload[0].payload.id !== "") {
@@ -33,7 +40,6 @@ const CustomTooltip = ({
             </div>
           </>
         );
-        
       } else if (payload[0].payload.id === "S") {
         return (
           <>
@@ -46,13 +52,13 @@ const CustomTooltip = ({
             </div>
           </>
         );
-      }else if (payload[0].payload.id === "V") {
+      } else if (payload[0].payload.id === "V") {
         return (
           <>
-            <div className="custom-tooltip-line-back-middle wednesday-back"></div>
+            <div className="custom-tooltip-line-back-middle"></div>
             <div
               style={{ bottom: test + "px" }}
-              className="custom-tooltip-line-middle wednesday"
+              className="custom-tooltip-line-middle"
             >
               <p className="label-line">{`${payload[0].value} min`}</p>
             </div>
@@ -70,7 +76,7 @@ const CustomTooltip = ({
             </div>
           </>
         );
-      }else {
+      } else {
         return (
           <>
             <div className="custom-tooltip-line-back"></div>
@@ -89,8 +95,16 @@ const CustomTooltip = ({
   return null;
 };
 
+/**
+ * React component - Display line chart
+ * @param {DisplayLineProptype} Props
+ * @param {null | AverageSessionsType} Props.data
+ * @return {JSX.Element}
+ */
 const DisplayLine = ({ data }: DisplayLineProptype): JSX.Element => {
-  const [newData, setNewData] = useState<undefined | NewAverageData[]>(undefined);
+  const [newData, setNewData] = useState<undefined | NewAverageData[]>(
+    undefined
+  );
   useEffect(() => {
     if (data) {
       const arr = [];

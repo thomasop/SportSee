@@ -2,7 +2,11 @@ import React from "react";
 import Header from "../Components/Header";
 import Construct from "../Components/Construct";
 
-const Profil: React.FC = () => {
+/**
+ * React component - Profil page
+ * @return {JSX.Element}
+ */
+const Profil = (): JSX.Element => {
   return (
     <>
       <Header />
