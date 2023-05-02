@@ -2,8 +2,80 @@
 
 /* Mixins for responsive device */
 
-@mixin desktopmini {
-    @media screen and (min-width: map-get($break, desktopwidth)) and (min-height: map-get($break, desktopheight)) {
+@mixin desktopMini {
+    @media screen and (min-width: map-get($break, desktopminiwidth)) {
+        @content
+    }
+}
+
+@mixin desktop {
+    @media screen and (min-width: map-get($break, desktopwidth)) {
+        @content
+    }
+}
+
+@mixin desktopHeight {
+    @media screen and (min-height: map-get($break, desktopheight)) {
+        @content
+    }
+}
+
+@mixin desktopMaxHeight {
+    @media screen and (min-height: map-get($break, desktopmaxheight)) {
+        @content
+    }
+}
+
+@mixin desktopWidthMax {
+    @media screen and (min-width: map-get($break, desktopmaxwidth)) {
+        @content
+    }
+}
+
+@mixin desktopMiniAndMaxHeight {
+    @media screen and (min-width: map-get($break, desktopminiwidth)) and (max-height: 940px) {
+        @content
+    }
+}
+
+@mixin desktopAndMaxHeight {
+    @media screen and (min-width: map-get($break, desktopwidth)) and (max-height: 940px) {
+        @content
+    }
+}
+
+@mixin desktopAndMinHeight {
+    @media screen and (min-width: map-get($break, desktopwidth)) and (min-height: 940px) {
+        @content
+    }
+}
+
+@mixin desktopAndMinMiddleHeight {
+    @media screen and (min-width: map-get($break, desktopwidth)) and (min-height: 1000px) {
+        @content
+    }
+}
+
+@mixin desktopAndMinBigHeight {
+    @media screen and (min-width: map-get($break, desktopwidth)) and (min-height: 1300px) {
+        @content
+    }
+}
+
+@mixin desktopMiniAndMinHeight {
+    @media screen and (min-width: map-get($break, desktopminiwidth)) and (min-height: 940px) {
+        @content
+    }
+}
+
+@mixin desktopMiniAndMinMiddleHeight {
+    @media screen and (min-width: map-get($break, desktopminiwidth)) and (min-height: 1000px) {
+        @content
+    }
+}
+
+@mixin desktopMiniAndMinBigHeight {
+    @media screen and (min-width: map-get($break, desktopminiwidth)) and (min-height: 1300px) {
         @content
     }
 }

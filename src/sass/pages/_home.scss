@@ -6,6 +6,9 @@
     &__section {
         text-align: center;
         margin-top: 100px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
     }
     &__h1 {
         margin-bottom: 50px;

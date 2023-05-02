@@ -1,22 +1,50 @@
 import { Dispatch, SetStateAction } from "react";
-import { activityType } from "../data/UserActivity";
-import { averageSessionsType } from "../data/UserAverageSessions";
-import { mainType } from "../data/UserMain";
-import { performanceType } from "../data/UserPerformance";
+import { ActivityType } from "../data/UserActivity";
+import { AverageSessionsType } from "../data/UserAverageSessions";
+import { MainType } from "../data/UserMain";
+import { PerformanceType } from "../data/UserPerformance";
 
-export interface userActivityPropType {
-  data: Dispatch<SetStateAction<activityType | null>>;
+export interface UserActivityPropType {
+  data: Dispatch<SetStateAction<ActivityType | null>>;
   userId: number;
 }
-export interface userAverageSessionsPropType {
-  data: Dispatch<SetStateAction<null | averageSessionsType>>;
+export interface UserAverageSessionsPropType {
+  data: Dispatch<SetStateAction<null | AverageSessionsType>>;
   userId: number;
 }
-export interface userMainPropType {
-  data: Dispatch<SetStateAction<null | mainType>>;
+export interface UserMainPropType {
+  data: Dispatch<SetStateAction<null | MainType>>;
   userId: number;
 }
-export interface userPerformancePropType {
-  data: Dispatch<SetStateAction<null | performanceType>>;
+export interface UserPerformancePropType {
+  data: Dispatch<SetStateAction<null | PerformanceType>>;
   userId: number;
+}
+
+export interface DisplayKeyDataProptype {
+  data: number | undefined;
+  unit: string;
+  image: string;
+  type: string;
+  name: string;
+}
+
+export interface DisplayBarProptype {
+  data: ActivityType | null;
+}
+
+export interface DisplayLineProptype {
+  data: null | AverageSessionsType;
+}
+
+export interface DisplayRadarProptype {
+  data: PerformanceType | null;
+}
+
+export interface DisplayRadialProptype {
+  data: MainType | null;
+}
+
+export interface DisplayMainDataProptype {
+  type: string;
 }

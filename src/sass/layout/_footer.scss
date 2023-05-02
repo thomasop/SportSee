@@ -2,15 +2,15 @@
 
 /* Footer tag */
 
-@include desktopmini {
+@include desktopMini {
     .side-nav {
         background-color: black;
-        width: 117px;
-        height: calc(100% - 91px);
-        position: absolute;
+        width: 87px;
+        height: 100%;
         display: flex;
-        top: 91px;
         align-items: center;
+        flex-direction: column;
+        justify-content: center;
         &__maindiv {
             max-width: 100%;
         }
@@ -21,30 +21,48 @@
             align-items: center;
         }
         &__img {
-            width: 64px;
-            height: 64px;
+            width: 34px;
+            height: 34px;
             &--margin {
                 margin-bottom: 20px;
             }
-        }
-        &__divtwo {
-            position: relative;
-            bottom: 0;
-            margin-bottom: 60px;
         }
         &__p {
             color: white;
             font-style: normal;
             font-weight: 500;
-            font-size: 12px;
-            line-height: 24px;
+            font-size: 10px;
+            line-height: 20px;
             transform: rotate(-90deg);
             width: 200px;
             display: flex;
             align-items: center;
-            position: relative;
-            bottom: -160px;
-            right: 40px;
+            position: absolute;
+            bottom: 140px;
+            left: -60px
+;
         }
+    }
+}
+
+@include desktop {
+    .side-nav {
+        width: 117px;
+        height: 100%;
+        &__img {
+            width: 64px;
+            height: 64px;
+        }
+        &__p {
+            font-size: 12px;
+            line-height: 24px;
+            left: -47px
+        }
+    }
+}
+
+@include desktopAndMaxHeight {
+    .side-nav__p {
+        bottom: 100px;
     }
 }

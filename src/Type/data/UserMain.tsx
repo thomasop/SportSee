@@ -1,27 +1,28 @@
-export interface userMainType {
-    USER_MAIN_DATA: mainType[]
+export interface UserMainType {
+  USER_MAIN_DATA: MainType[];
 }
 
-export interface mainType {
-    id: number;
-    userInfos: userInfo;
-    todayScore: number;
-    keyData: keyData;
+export interface MainType {
+  id: number;
+  userInfos: UserInfo;
+  todayScore: number;
+  score: number;
+  keyData: KeyData;
 }
 
-interface userInfo {
-    firstName: string;
-    lastName: string;
-    age: number;
+interface UserInfo {
+  firstName: string;
+  lastName: string;
+  age: number;
 }
 
-interface keyData {
-    calorieCount: number;
-    proteinCount: number;
-    carbohydrateCount: number;
-    lipidCount: number;
+interface KeyData {
+  calorieCount: number;
+  proteinCount: number;
+  carbohydrateCount: number;
+  lipidCount: number;
 }
 
-export interface userMainApiType {
-    data: mainType[]
+export interface UserMainApiType {
+  data: MainType[];
 }

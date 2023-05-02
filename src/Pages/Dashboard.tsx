@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "../Components/Header";
 import SideNav from "../Components/SideNav";
-import DisplayMainData from "../Components/DisplayMainData";
+import DisplayMainData from "../Components/Data/DisplayMainData";
 
 const Dashboard: React.FC = () => {
   return (
@@ -9,7 +9,27 @@ const Dashboard: React.FC = () => {
       <Header />
       <main>
         <SideNav />
-        <DisplayMainData />
+
+        <div className="dashboard__all">
+          <DisplayMainData type={"text"} />
+          <div className="dashboard__data">
+            <div className="dashboard__charts">
+              <div className="dashboard__activity">
+              </div>
+              <div className="dashboard__flex">
+                <div className="dashboard__flex--average">
+                </div>
+                <div className="dashboard__flex--performance">
+                </div>
+                <div className="dashboard__flex--score">
+                </div>
+              </div>
+            </div>
+            <div className="dashboard__keyData">
+              <DisplayMainData type={"keyData"} />
+            </div>
+          </div>
+        </div>
       </main>
     </>
   );

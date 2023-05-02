@@ -2,26 +2,49 @@
 
 /* DisplayMainData component */
 
-.display {
-    margin-left: 224px;
-    margin-top: 68px;
-    &__h1 {
-        font-style: normal;
-        font-weight: 500;
-        font-size: 48px;
-        line-height: 24px;
+@include desktopMini {
+    .display {
+        padding-top: 85px;
+        margin-left: 94px;
+        &__h1 {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 48px;
+            line-height: 24px;
+        }
+        &__span {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 48px;
+            line-height: 24px;
+            color: #FF0101;
+        }
+        &__p {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 24px;
+        }
+        &__keyData {
+            margin-top: 57px;
+            left: 75%;
+            margin-top: 40px;
+        }
     }
-    &__span {
-        font-style: normal;
-        font-weight: 500;
-        font-size: 48px;
-        line-height: 24px;
-        color: #FF0101;
+}
+
+@include desktop {
+    .display {
+        padding-top: 68px;
+        &__keyData {
+            width: 20%;
+            margin-top: 59px;
+        }
     }
-    &__p {
-        font-style: normal;
-        font-weight: 400;
-        font-size: 18px;
-        line-height: 24px;
+}
+
+@include desktopMaxHeight {
+    .display  {
+        flex: 1;
     }
 }

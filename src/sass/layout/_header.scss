@@ -2,19 +2,19 @@
 
 /* Header tag */
 
-@include desktopmini {
+@include desktopMini {
     .header {
         display: flex;
         position: relative;
         z-index: 1;
         background-color: black;
-        height: 91px;
+        height: 71px;
         width: 100%;
         min-width: 100%;
         &__img {
-            width: 178px;
-            height: 60px;
-            margin-left: 28px;
+            width: 125px;
+            height: 40px;
+            margin-left: 20px;
         }
         &__nav {
             width: 100%;
@@ -33,9 +33,24 @@
             text-decoration: none;
             font-style: normal;
             font-weight: 500;
+            font-size: 18px;
+            line-height: 18px;
+            color: white;
+        }
+    }
+}
+
+@include desktop {
+    .header {
+        height: 91px;
+        &__img {
+            width: 178px;
+            height: 60px;
+            margin-left: 28px;
+        }
+        &__a {
             font-size: 24px;
             line-height: 24px;
-            color: white;
         }
     }
 }

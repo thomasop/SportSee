@@ -1,0 +1,258 @@
+@import "../utils/variables";
+
+/* Style for home page */
+
+@include desktopAndMaxHeight {
+    .dashboard__keyData {
+        margin-top: 70px;
+    }
+    .dashboard__flex {
+        margin-bottom: unset;
+    }
+}
+
+@include desktopMiniAndMaxHeight {
+    .dashboard__activity {
+        margin-top: 37px;
+    }
+    .dashboard__activity {
+        margin-left: 84px;
+        height: 260px;
+    }
+    .dashboard__keyData {
+        height: 480px;
+        margin-top: 60px;
+        margin-right: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .dashboard__flex {
+        margin-left: 84px;
+    }
+    .dashboard__flex--average {
+        display: block;
+        background-color: #FF0000;
+        width: 32%;
+        height: 180px;
+        border-radius: 5px;
+    }
+    .dashboard__flex--performance {
+        display: block;
+        background-color: #FF0000;
+        height: 180px;
+        width: 32%;
+        border-radius: 5px;
+    }
+    .dashboard__flex--score {
+        display: block;
+        height: 180px;
+        background-color: #FF0000;
+        width: 32%;
+        border-radius: 5px;
+    }
+}
+
+@include desktopMiniAndMinHeight {
+    .dashboard__activity {
+        width: 78%;
+        height: 320px;
+        margin-top: 77px;
+        margin-left: 84px;
+    }
+    .dashboard__flex {
+        margin-left: 84px;
+    }
+    .dashboard__keyData {
+        height: 550px;
+        margin-top: 60px;
+        margin-right: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .dashboard__flex--average {
+        height: 200px;
+    }
+    .dashboard__flex--performance {
+        height: 200px;
+    }
+    .dashboard__flex--score {
+        height: 200px;
+    }
+}
+
+@include desktopAndMinHeight {
+    .dashboard__activity {
+        width: 78%;
+        height: 320px;
+        margin-top: 77px;
+        margin-left: 84px;
+    }
+    .dashboard__keyData {
+        height: 550px;
+        margin-top: 60px;
+        margin-right: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+@include desktopMiniAndMinMiddleHeight {
+    .dashboard__keyData {
+        margin-right: 50px;
+        height: unset;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-top: 70px;
+    }
+    .dashboard__flex--average {
+        height: 200px;
+    }
+    .dashboard__flex--performance {
+        height: 200px;
+    }
+    .dashboard__flex--score {
+        height: 200px;
+    }
+}
+
+@media screen and (min-width: 1024px) and (min-height: 1100px) {
+    .dashboard__keyData {
+        justify-content: space-around;
+        margin-top: 50px;
+    }
+}
+
+@include desktopMiniAndMinBigHeight {
+    .dashboard__keyData {
+        margin-top: 30px;
+    }
+    .dashboard__activity {
+        height: 400px;
+    }
+    .dashboard__flex--average {
+        height: 280px;
+    }
+    .dashboard__flex--performance {
+        height: 280px;
+    }
+    .dashboard__flex--score {
+        height: 280px;
+    }
+}
+
+@include desktopHeight {
+    main {
+        position: unset !important;
+    }
+}
+
+@include desktopMini {
+    main {
+        position: relative;
+    }
+    .dashboard {
+        &__all {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            height: 90%;
+            width: 100%;
+        }
+        &__data {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        &__charts {
+            width: 80%;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+        &__activity {
+            display: block;
+            background-color: #FBFBFB;
+            width: 80%;
+            border-radius: 5px;
+            margin-top: 57px;
+        }
+        &__keyData {
+            width: 240px;
+        }
+        &__flex {
+            display: flex;
+            margin-top: 30px;
+            width: 80%;
+            justify-content: space-between;
+            &--average {
+                display: block;
+                background-color: #FF0000;
+                width: 32%;
+                border-radius: 5px;
+            }
+            &--performance {
+                display: block;
+                background-color: #282D30;
+                width: 32%;
+                border-radius: 5px;
+            }
+            &--score {
+                display: block;
+                background-color: #FBFBFB;
+                width: 32%;
+                border-radius: 5px;
+            }
+        }
+    }
+}
+
+@include desktop {
+    main {
+        position: relative;
+    }
+    .dashboard__keyData {
+        width: 16%;
+    }
+
+    .dashboard__flex {
+        width: 80%;
+        &__two {
+            height: 263px;
+            width: 32%;
+        }
+
+        &__three {
+            height: 263px;
+            width: 32%;
+        }
+
+        &__four {
+            height: 263px;
+            width: 32%;
+        }
+    }
+}
+
+@include desktopMaxHeight {
+    .dashboard {
+        &__all {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            height: 90%;
+            width: 100%;
+        }
+        &__data {
+            flex: 5;
+            align-items: unset;
+        }
+
+        &__charts {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+    }
+}

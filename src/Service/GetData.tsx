@@ -1,22 +1,22 @@
-import React, { useEffect } from "react";
-import { userActivityType, activityApiType } from "../Type/data/UserActivity";
+import { useEffect } from "react";
+import { UserActivityType, ActivityApiType } from "../Type/data/UserActivity";
 import {
-  userAverageSessionsType,
-  userAverageSessionsApiType,
+  UserAverageSessionsType,
+  UserAverageSessionsApiType,
 } from "../Type/data/UserAverageSessions";
-import { userMainType, userMainApiType } from "../Type/data/UserMain";
+import { UserMainType, UserMainApiType } from "../Type/data/UserMain";
 import {
-  userPerformanceType,
-  userPerformanceApiType,
+  UserPerformanceType,
+  UserPerformanceApiType,
 } from "../Type/data/UserPerformance";
 import {
-  userAverageSessionsPropType,
-  userActivityPropType,
-  userMainPropType,
-  userPerformancePropType,
+  UserAverageSessionsPropType,
+  UserActivityPropType,
+  UserMainPropType,
+  UserPerformancePropType,
 } from "../Type/proptype/PropTypes";
 
-export const GetDataAcitvity: React.FC<userActivityPropType> = ({
+export const GetDataAcitvity: React.FC<UserActivityPropType> = ({
   data,
   userId,
 }) => {
@@ -24,7 +24,7 @@ export const GetDataAcitvity: React.FC<userActivityPropType> = ({
     if (process.env.REACT_APP_SOURCE === "mock") {
       const getData = async () => {
         const response = await fetch("../data/dataActivity.json");
-        const json: userActivityType = await response.json();
+        const json: UserActivityType = await response.json();
         const one = json.USER_ACTIVITY.filter((o) => o.userId === userId);
         data(one[0]);
       };
@@ -34,7 +34,7 @@ export const GetDataAcitvity: React.FC<userActivityPropType> = ({
         const response = await fetch(
           `${process.env.REACT_APP_API_HOST}/user/${userId}/activity`
         );
-        const json: activityApiType = await response.json();
+        const json: ActivityApiType = await response.json();
         data(Object.values(json)[0]);
       };
       getData();
@@ -44,7 +44,7 @@ export const GetDataAcitvity: React.FC<userActivityPropType> = ({
   return null;
 };
 
-export const GetDataAverageSessions: React.FC<userAverageSessionsPropType> = ({
+export const GetDataAverageSessions: React.FC<UserAverageSessionsPropType> = ({
   data,
   userId,
 }) => {
@@ -52,7 +52,7 @@ export const GetDataAverageSessions: React.FC<userAverageSessionsPropType> = ({
     if (process.env.REACT_APP_SOURCE === "mock") {
       const getData = async () => {
         const response = await fetch("../data/dataAverageSessions.json");
-        const json: userAverageSessionsType = await response.json();
+        const json: UserAverageSessionsType = await response.json();
         const one = json.USER_AVERAGE_SESSIONS.filter(
           (o) => o.userId === userId
         );
@@ -65,7 +65,7 @@ export const GetDataAverageSessions: React.FC<userAverageSessionsPropType> = ({
         const response = await fetch(
           `${process.env.REACT_APP_API_HOST}/user/${userId}/average-sessions`
         );
-        const json: userAverageSessionsApiType = await response.json();
+        const json: UserAverageSessionsApiType = await response.json();
         data(Object.values(json)[0]);
       };
       getData();
@@ -75,12 +75,12 @@ export const GetDataAverageSessions: React.FC<userAverageSessionsPropType> = ({
   return null;
 };
 
-export const GetDataMain: React.FC<userMainPropType> = ({ data, userId }) => {
+export const GetDataMain: React.FC<UserMainPropType> = ({ data, userId }) => {
   useEffect(() => {
     if (process.env.REACT_APP_SOURCE === "mock") {
       const getData = async () => {
         const response = await fetch("../data/dataMain.json");
-        const json: userMainType = await response.json();
+        const json: UserMainType = await response.json();
         const one = json.USER_MAIN_DATA.filter((o) => o.id === userId);
         data(one[0]);
       };
@@ -90,7 +90,7 @@ export const GetDataMain: React.FC<userMainPropType> = ({ data, userId }) => {
         const response = await fetch(
           `${process.env.REACT_APP_API_HOST}/user/${userId}`
         );
-        const json: userMainApiType = await response.json();
+        const json: UserMainApiType = await response.json();
         data(Object.values(json)[0]);
       };
       getData();
@@ -100,7 +100,7 @@ export const GetDataMain: React.FC<userMainPropType> = ({ data, userId }) => {
   return null;
 };
 
-export const GetDataPerformance: React.FC<userPerformancePropType> = ({
+export const GetDataPerformance: React.FC<UserPerformancePropType> = ({
   data,
   userId,
 }) => {
@@ -108,7 +108,7 @@ export const GetDataPerformance: React.FC<userPerformancePropType> = ({
     if (process.env.REACT_APP_SOURCE === "mock") {
       const getData = async () => {
         const response = await fetch("../data/dataPerformance.json");
-        const json: userPerformanceType = await response.json();
+        const json: UserPerformanceType = await response.json();
         const one = json.USER_PERFORMANCE.filter((o) => o.userId === userId);
         data(one[0]);
       };
@@ -118,7 +118,7 @@ export const GetDataPerformance: React.FC<userPerformancePropType> = ({
         const response = await fetch(
           `${process.env.REACT_APP_API_HOST}/user/${userId}/performance`
         );
-        const json: userPerformanceApiType = await response.json();
+        const json: UserPerformanceApiType = await response.json();
         data(Object.values(json)[0]);
       };
       getData();

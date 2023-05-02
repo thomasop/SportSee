@@ -1,17 +1,23 @@
-export interface userAverageSessionsType {
-    USER_AVERAGE_SESSIONS: averageSessionsType[]
+export interface UserAverageSessionsType {
+  USER_AVERAGE_SESSIONS: AverageSessionsType[];
 }
 
-export interface averageSessionsType {
-    userId: number;
-    sessions: session
+export interface AverageSessionsType {
+  userId: number;
+  sessions: Session[];
 }
 
-interface session {
-    day: number;
-    sessionLength: number;
+interface Session {
+  day: number;
+  sessionLength: number;
 }
 
-export interface userAverageSessionsApiType {
-    data: averageSessionsType[]
+export interface UserAverageSessionsApiType {
+  data: AverageSessionsType[];
+}
+
+export interface NewAverageData {
+  id: string;
+  day: number;
+  sessionLength: number;
 }

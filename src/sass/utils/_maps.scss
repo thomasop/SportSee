@@ -1,6 +1,9 @@
 /* Maps for responsive device */
 
 $break: (
-    desktopwidth: 1024px,
-    desktopheight: 780px
+    desktopminiwidth: 1024px,
+    desktopwidth: 1440px,
+    desktopheight: 950px,
+    desktopmaxheight: 1000px,
+    desktopmaxwidth: 1700px,
 );

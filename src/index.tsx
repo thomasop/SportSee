@@ -13,7 +13,6 @@ const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
 root.render(
-  <React.StrictMode>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
@@ -24,5 +23,4 @@ root.render(
         <Route path="/*" element={<Error404 />} />
       </Routes>
     </BrowserRouter>
-  </React.StrictMode>
 );
