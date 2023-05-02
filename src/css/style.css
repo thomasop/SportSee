@@ -490,6 +490,18 @@ main {
     right: -10px;
   }
 }
+/* Maps for responsive device */
+/* Mixins for responsive device */ /* DisplayRadar component */
+@media screen and (min-width: 1024px) {
+  .recharts-polar-angle-axis-tick text {
+    font-size: 10px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .recharts-polar-angle-axis-tick text {
+    font-size: 14px;
+  }
+}
 /* Variable for color and animation duration */
 /* Style for home page */
 .home__section {

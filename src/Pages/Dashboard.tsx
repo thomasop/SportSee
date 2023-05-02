@@ -4,6 +4,7 @@ import SideNav from "../Components/SideNav";
 import DisplayMainData from "../Components/Data/DisplayMainData";
 import DisplayActivityData from "../Components/Data/DisplayActivityData";
 import DisplayAverageData from "../Components/Data/DisplayAverageData";
+import DisplayPerformanceData from "../Components/Data/DisplayPerformanceData";
 
 const Dashboard: React.FC = () => {
   return (
@@ -24,6 +25,7 @@ const Dashboard: React.FC = () => {
                   <DisplayAverageData />
                 </div>
                 <div className="dashboard__flex--performance">
+                  <DisplayPerformanceData />
                 </div>
                 <div className="dashboard__flex--score">
                 </div>

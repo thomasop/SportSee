@@ -1,0 +1,14 @@
+@import "../../utils/mixins";
+
+/* DisplayRadar component */
+
+@include desktopMini {
+    .recharts-polar-angle-axis-tick text {
+        font-size: 10px;
+    }
+}
+@include desktop{
+    .recharts-polar-angle-axis-tick text {
+        font-size: 14px;
+    }
+}
