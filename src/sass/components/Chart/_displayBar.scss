@@ -23,10 +23,11 @@
 
 .text-color-class {
   padding-left: 12px;
+  font-size: 15px;
 }
-    .recharts-cartesian-axis-tick-value tspan {
-        font-size: 12px;
-      }
+.recharts-cartesian-axis-tick-value tspan {
+    font-size: 12px;
+  }
 }
 
 @include desktop {

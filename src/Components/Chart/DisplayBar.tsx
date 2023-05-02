@@ -73,7 +73,7 @@ const DisplayBar = ({ data }: DisplayBarProptype): JSX.Element => {
             >
               <text
                 x="32px"
-                y="24px"
+                y="26px"
                 dy={+12}
                 style={{ fill: "#20253A" }}
                 className="barText"

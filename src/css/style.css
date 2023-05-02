@@ -215,12 +215,12 @@ main {
     margin-left: 24px;
   }
   .DisplayKeyData__p {
-    font-size: 14px;
+    font-size: 13px;
     line-height: 24px;
     margin: 0;
   }
   .DisplayKeyData__p--font {
-    font-size: 20px;
+    font-size: 18px;
     line-height: 24px;
     font-weight: 700;
   }
@@ -236,6 +236,12 @@ main {
   }
   .DisplayKeyData__div {
     margin-left: unset;
+  }
+  .DisplayKeyData__p {
+    font-size: 14px;
+  }
+  .DisplayKeyData__p--font {
+    font-size: 20px;
   }
 }
 /* Maps for responsive device */
@@ -259,6 +265,7 @@ main {
   }
   .text-color-class {
     padding-left: 12px;
+    font-size: 15px;
   }
   .recharts-cartesian-axis-tick-value tspan {
     font-size: 12px;
