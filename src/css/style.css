@@ -850,5 +850,45 @@ main {
     justify-content: space-around;
   }
 }
+/* Variable for color and animation duration */
+/* Style for construct page */
+.construct {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.construct__h1 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 38px;
+  line-height: 24px;
+}
+.construct__p {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.construct__img {
+  width: 70px;
+  animation: rotate 1s infinite;
+}
+
+@media screen and (min-width: 1440px) {
+  .construct__h1 {
+    font-size: 48px;
+  }
+  .construct__img {
+    width: 80px;
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(45deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
 
 /*# sourceMappingURL=style.css.map */

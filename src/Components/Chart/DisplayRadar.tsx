@@ -49,7 +49,7 @@ const DisplayRadar = ({ data }: DisplayRadarProptype): JSX.Element => {
               />
               <Radar
                 name="Mike"
-                dataKey="kind"
+                dataKey="value"
                 fill="#FF0101"
                 fillOpacity={0.6}
               />
