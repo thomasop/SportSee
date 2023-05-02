@@ -5,6 +5,7 @@ import { MainType } from "../../Type/data/UserMain";
 import DisplayKeyData from "./DisplayKeyData";
 import DisplayRadial from "../Chart/DisplayRadial";
 import { DisplayMainDataProptype } from "../../Type/proptype/PropTypes";
+import PropTypes from "prop-types"
 
 let ar: string[][] = [
   ["calorieCount", "kcal", "calories-icon.png", "Calories"],
@@ -71,3 +72,7 @@ const DisplayMainData = ({ type }: DisplayMainDataProptype): JSX.Element => {
 };
 
 export default DisplayMainData;
+
+DisplayMainData.propTypes = {
+  type: PropTypes.string
+}
