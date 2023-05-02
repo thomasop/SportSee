@@ -238,6 +238,50 @@ main {
     margin-left: unset;
   }
 }
+/* Maps for responsive device */
+/* Mixins for responsive device */ /* DisplayBar component */
+@media screen and (min-width: 1024px) {
+  .custom-tooltip {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #E60000;
+    width: 39px;
+    height: 63px;
+  }
+  .custom-tooltip p {
+    font-size: 7px;
+    text-align: center;
+    color: white;
+  }
+  .barText {
+    font-size: 15px;
+  }
+  .text-color-class {
+    padding-left: 12px;
+  }
+  .recharts-cartesian-axis-tick-value tspan {
+    font-size: 12px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .custom-tooltip {
+    width: 49px;
+    height: 73px;
+  }
+  .custom-tooltip p {
+    font-size: 12px;
+  }
+  .text-color-class {
+    font-size: 18px;
+  }
+  .barText {
+    font-size: 20px;
+  }
+  .recharts-cartesian-axis-tick-value tspan {
+    font-size: 16px;
+  }
+}
 /* Variable for color and animation duration */
 /* Style for home page */
 .home__section {

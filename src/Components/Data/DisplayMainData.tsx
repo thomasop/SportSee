@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import { GetDataMain } from "../../Service/GetData";
 import { MainType } from "../../Type/data/UserMain";
-import DisplayKeyData from "../DisplayKeyData";
+import DisplayKeyData from "./DisplayKeyData";
 
 interface proptype {
   type: string;

@@ -2,6 +2,7 @@ import React from "react";
 import Header from "../Components/Header";
 import SideNav from "../Components/SideNav";
 import DisplayMainData from "../Components/Data/DisplayMainData";
+import DisplayActivityData from "../Components/Data/DisplayActivityData";
 
 const Dashboard: React.FC = () => {
   return (
@@ -15,6 +16,7 @@ const Dashboard: React.FC = () => {
           <div className="dashboard__data">
             <div className="dashboard__charts">
               <div className="dashboard__activity">
+                <DisplayActivityData />
               </div>
               <div className="dashboard__flex">
                 <div className="dashboard__flex--average">

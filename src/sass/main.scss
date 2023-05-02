@@ -5,7 +5,8 @@
 @import "./base/base";
 @import "./layout/header";
 @import "./layout/footer";
-@import "./components/displayMainData";
-@import "./components/displayKeyData";
+@import "./components/Data/displayMainData";
+@import "./components/Data/displayKeyData";
+@import "./components/Chart/displayBar";
 @import "./pages/home";
 @import "./pages/dashboard";

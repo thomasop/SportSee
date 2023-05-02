@@ -1,0 +1,52 @@
+@import "../../utils/mixins";
+
+/* DisplayBar component */
+
+@include desktopMini {
+  .custom-tooltip {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #E60000;
+    width: 39px;
+    height: 63px;
+    & p {
+        font-size: 7px;
+        text-align: center;
+        color: white;
+    }
+}
+
+.barText {
+  font-size: 15px;
+}
+
+.text-color-class {
+  padding-left: 12px;
+}
+    .recharts-cartesian-axis-tick-value tspan {
+        font-size: 12px;
+      }
+}
+
+@include desktop {
+  .custom-tooltip {
+      width: 49px;
+      height: 73px;
+      & p {
+          font-size: 12px;
+      }
+  }
+
+  .text-color-class {
+    font-size: 18px;
+  }
+
+  .barText {
+    font-size: 20px;
+  }
+
+  .recharts-cartesian-axis-tick-value tspan {
+    font-size: 16px;
+  }
+}
