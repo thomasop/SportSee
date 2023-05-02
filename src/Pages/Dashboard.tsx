@@ -28,6 +28,7 @@ const Dashboard: React.FC = () => {
                   <DisplayPerformanceData />
                 </div>
                 <div className="dashboard__flex--score">
+                  <DisplayMainData type={"graph"} />
                 </div>
               </div>
             </div>

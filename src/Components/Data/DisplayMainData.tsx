@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { GetDataMain } from "../../Service/GetData";
 import { MainType } from "../../Type/data/UserMain";
 import DisplayKeyData from "./DisplayKeyData";
+import DisplayRadial from "../Chart/DisplayRadial";
 
 interface proptype {
   type: string;
@@ -55,6 +56,11 @@ const DisplayMainData: React.FC<proptype> = ({ type }) => {
               )}
             </React.Fragment>
           ))}
+        </>
+      )}
+      {type === "graph" && (
+        <>
+          <DisplayRadial data={data} />
         </>
       )}
     </>

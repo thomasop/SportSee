@@ -1,0 +1,81 @@
+@import "../../utils/mixins";
+
+/* DisplayRadial component */
+
+.legend-item-1 {
+    margin-left: 32px;
+}
+.custom-legend {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.paddinglegend {
+  position: relative;
+}
+
+.legend-abos {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@include desktopMini {
+  .legend {
+      font-size: 1rem;
+      font-weight: 700;
+      text-align: center;
+      margin: 0;
+    }
+
+    .custom-legend span{
+      display: block;
+      font-size: 12px;
+      width: max-content;
+      font-weight: 500;
+      text-align: center;
+      color: #74798C;
+    }
+}
+
+@include desktop{
+  .legend {
+      font-size: 1.5rem;
+    }
+    .custom-legend span{
+      font-size: 16px;
+    }
+}
+
+@include desktopMiniAndMaxHeight {
+  .score-title{
+    position: absolute;
+    left: 10px;
+    top: -75px;
+    font-size: 14px;
+  }
+}
+
+@include desktopAndMaxHeight {
+  .score-title{
+    font-size: 18px;
+  }
+}
+
+@include desktopMiniAndMinHeight {
+  .score-title{
+    position: absolute;
+    left: 20px;
+    top: -70px;
+    font-size: 16px;
+  }
+}
+
+@include desktopMiniAndMinBigHeight {
+  .score-title{
+    left: 20px;
+    top: -110px;
+    font-size: 20px;
+  }
+}
