@@ -10,6 +10,7 @@ import {
 import {
   ValueType,
   NameType,
+  Payload,
 } from "recharts/types/component/DefaultTooltipContent";
 import { NewAverageData } from "../../Type/data/UserAverageSessions";
 import { DisplayLineProptype } from "../../Type/proptype/PropTypes";
@@ -28,65 +29,38 @@ const CustomTooltip = ({
   if (active && payload && payload.length) {
     if (payload[0].payload.id !== "") {
       let test = Number(payload[0].value) + 60;
-      if (payload[0].payload.id === "D") {
+      const render = (payload: Payload<ValueType, NameType>[], classBack: string, classLine: string, test: number) => {
         return (
           <>
-            <div className="custom-tooltip-line-back-last"></div>
+            <div className={classBack}></div>
             <div
               style={{ bottom: test + "px" }}
-              className="custom-tooltip-line-last"
+              className={classLine}
             >
               <p className="label-line">{`${payload[0].value} min`}</p>
             </div>
           </>
+        );
+      }
+      if (payload[0].payload.id === "D") {
+        return (
+          render(payload, "custom-tooltip-line-back-last", "custom-tooltip-line-last", test)
         );
       } else if (payload[0].payload.id === "S") {
         return (
-          <>
-            <div className="custom-tooltip-line-back-middle saturday-back"></div>
-            <div
-              style={{ bottom: test + "px" }}
-              className="custom-tooltip-line-middle saturday"
-            >
-              <p className="label-line">{`${payload[0].value} min`}</p>
-            </div>
-          </>
+          render(payload, "custom-tooltip-line-back-middle saturday-back", "custom-tooltip-line-middle saturday", test)
         );
       } else if (payload[0].payload.id === "V") {
         return (
-          <>
-            <div className="custom-tooltip-line-back-middle"></div>
-            <div
-              style={{ bottom: test + "px" }}
-              className="custom-tooltip-line-middle"
-            >
-              <p className="label-line">{`${payload[0].value} min`}</p>
-            </div>
-          </>
+          render(payload, "custom-tooltip-line-back-middle wednesday-back", "custom-tooltip-line-middle wednesday", test)
         );
       } else if (payload[0].payload.id === "J") {
         return (
-          <>
-            <div className="custom-tooltip-line-back-friday"></div>
-            <div
-              style={{ bottom: test + "px" }}
-              className="custom-tooltip-line-friday"
-            >
-              <p className="label-line">{`${payload[0].value} min`}</p>
-            </div>
-          </>
+          render(payload, "custom-tooltip-line-back-friday", "custom-tooltip-line-friday", test)
         );
       } else {
         return (
-          <>
-            <div className="custom-tooltip-line-back"></div>
-            <div
-              style={{ bottom: test + "px" }}
-              className="custom-tooltip-line"
-            >
-              <p className="label-line">{`${payload[0].value} min`}</p>
-            </div>
-          </>
+          render(payload, "custom-tooltip-line-back", "custom-tooltip-line", test)
         );
       }
     }

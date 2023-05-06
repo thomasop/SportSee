@@ -25,7 +25,6 @@ export interface DisplayKeyDataProptype {
   data: number | undefined;
   unit: string;
   image: string;
-  type: string;
   name: string;
 }
 

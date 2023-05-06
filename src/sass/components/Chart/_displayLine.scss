@@ -105,21 +105,6 @@
   }
 }
 
-
-@media screen and (min-width: 1574px) {
-  .custom-tooltip-line-middle {
-    background-color: white;
-    position: absolute;
-    width: 40px;
-    z-index: 1;
-    padding: 7px;
-    left: 0px;
-  }
-  .custom-tooltip-line-back-middle {
-    right: 10px !important;
-  }
-}
-
 @include desktopMiniAndMinHeight {
   .custom-tooltip-line-back {
     height: 200px;
@@ -143,6 +128,8 @@
       margin-left: 1%;
       position: absolute;
       width: 110px;
+      mix-blend-mode: normal;
+      opacity: 0.5;
     }
   .custom-tooltip-line-back {
       background-color: #E60000;
@@ -170,6 +157,29 @@
     opacity: 0.7;
     width: 80px;
     position: relative;
+    right: -10px;
+  }
+}
+
+@media screen and (min-width: 1370px) {
+  .wednesday-back {
+    right: 10px;
+  }
+}
+
+@media screen and (min-width: 1574px) {
+  .custom-tooltip-line-middle {
+    background-color: white;
+    position: absolute;
+    width: 40px;
+    z-index: 1;
+    padding: 7px;
+    left: 0px;
+  }
+  .custom-tooltip-line-back-middle {
+    right: 10px;
+  }
+  .saturday-back {
     right: -10px;
   }
 }

@@ -7,7 +7,6 @@ import { DisplayKeyDataProptype } from "../../Type/proptype/PropTypes";
  * @param {number | undefined} Props.data
  * @param {string} Props.unit
  * @param {string} Props.image
- * @param {string} Props.type
  * @param {string} Props.name
  * @returns {JSX.Element}
  */
@@ -15,7 +14,6 @@ const DisplayKeyData = ({
   data,
   unit,
   image,
-  type,
   name,
 }: DisplayKeyDataProptype): JSX.Element => {
   return (
