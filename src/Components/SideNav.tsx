@@ -1,5 +1,3 @@
-import React from "react";
-
 /**
  * React component - Display side nav html
  * @return {JSX.Element}

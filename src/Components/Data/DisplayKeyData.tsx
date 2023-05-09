@@ -1,4 +1,3 @@
-import React from "react";
 import { DisplayKeyDataProptype } from "../../Type/proptype/PropTypes";
 
 /**

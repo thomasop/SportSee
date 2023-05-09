@@ -29,7 +29,7 @@ export interface DisplayKeyDataProptype {
 }
 
 export interface DisplayBarProptype {
-  data: ActivityType | null;
+  data: ActivityType;
 }
 
 export interface DisplayLineProptype {

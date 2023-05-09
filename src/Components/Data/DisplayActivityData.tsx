@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import DisplayBar from "../Chart/DisplayBar";
-import { GetDataAcitvity } from "../../Service/GetData";
+import { GetDataActivity } from "../../Service/GetData";
 import { useParams } from "react-router-dom";
 import { ActivityType } from "../../Type/data/UserActivity";
 
@@ -13,8 +13,8 @@ const DisplayActivityData = (): JSX.Element => {
   const [data, setData] = useState<null | ActivityType>(null);
   return (
     <>
-      <GetDataAcitvity data={setData} userId={Number(id)} />
-      <DisplayBar data={data} />
+      <GetDataActivity data={setData} userId={Number(id)} />
+      {data != null && <DisplayBar data={data} />}
     </>
   );
 };

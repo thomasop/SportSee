@@ -16,7 +16,7 @@ import {
   UserPerformancePropType,
 } from "../Type/proptype/PropTypes";
 
-export const GetDataAcitvity: React.FC<UserActivityPropType> = ({
+export const GetDataActivity: React.FC<UserActivityPropType> = ({
   data,
   userId,
 }) => {

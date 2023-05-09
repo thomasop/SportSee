@@ -1,4 +1,3 @@
-import React from "react";
 import Header from "../Components/Header";
 import SideNav from "../Components/SideNav";
 import DisplayMainData from "../Components/Data/DisplayMainData";
@@ -16,7 +15,6 @@ const Dashboard = (): JSX.Element => {
       <Header />
       <main>
         <SideNav />
-
         <div className="dashboard__all">
           <DisplayMainData type={"text"} />
           <div className="dashboard__data">

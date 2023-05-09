@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { GetDataPerformance } from "../../Service/GetData";
 import { useParams } from "react-router-dom";
 import { PerformanceType } from "../../Type/data/UserPerformance";
@@ -14,7 +14,7 @@ const DisplayPerformanceData = (): JSX.Element => {
   return (
     <>
       <GetDataPerformance data={setData} userId={Number(id)} />
-      <DisplayRadar data={data} />
+      {data != null && <DisplayRadar data={data} />}
     </>
   );
 };

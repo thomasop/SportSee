@@ -1,5 +1,3 @@
-import React from "react";
-
 /**
  * React component - Display construct section
  * @return  {JSX.Element}

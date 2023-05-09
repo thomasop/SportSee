@@ -23,10 +23,9 @@ let ar: string[][] = [
 const DisplayMainData = ({ type }: DisplayMainDataProptype): JSX.Element => {
   const { id } = useParams();
   const [data, setData] = useState<null | MainType>(null);
-  return (
-    <>
-      <GetDataMain data={setData} userId={Number(id)} />
-      {type === "text" && (
+  const display = () => {
+    if (type === "text") {
+      return (
         <>
           <div className="display">
             <h1 className="display__h1">
@@ -41,8 +40,9 @@ const DisplayMainData = ({ type }: DisplayMainDataProptype): JSX.Element => {
             </p>
           </div>
         </>
-      )}
-      {type === "keyData" && (
+      );
+    } else if (type === "keyData") {
+      return (
         <>
           {ar.map((p, index) => (
             <React.Fragment key={index}>
@@ -60,12 +60,19 @@ const DisplayMainData = ({ type }: DisplayMainDataProptype): JSX.Element => {
             </React.Fragment>
           ))}
         </>
-      )}
-      {type === "graph" && (
+      );
+    } else if (type === "graph") {
+      return (
         <>
           <DisplayRadial data={data} />
         </>
-      )}
+      );
+    }
+  };
+  return (
+    <>
+      <GetDataMain data={setData} userId={Number(id)} />
+      {data != null && display()}
     </>
   );
 };

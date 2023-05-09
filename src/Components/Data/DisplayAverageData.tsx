@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { GetDataAverageSessions } from "../../Service/GetData";
 import DisplayLine from "../Chart/DisplayLine";
 import { useParams } from "react-router-dom";
@@ -14,7 +14,7 @@ const DisplayAverageData = (): JSX.Element => {
   return (
     <>
       <GetDataAverageSessions data={setData} userId={Number(id)} />
-      <DisplayLine data={data} />
+      {data != null && <DisplayLine data={data} />}
     </>
   );
 };
