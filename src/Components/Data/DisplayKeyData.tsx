@@ -3,10 +3,10 @@ import { DisplayKeyDataProptype } from "../../Type/proptype/PropTypes";
 /**
  * React component - Display key data
  * @param {DisplayKeyDataProptype} Props
- * @param {number | undefined} Props.data
- * @param {string} Props.unit
- * @param {string} Props.image
- * @param {string} Props.name
+ * @param {number | undefined} Props.data - value of key data
+ * @param {string} Props.unit - unit of key data
+ * @param {string} Props.image - image of key data
+ * @param {string} Props.name - name of key data
  * @returns {JSX.Element}
  */
 const DisplayKeyData = ({

@@ -20,8 +20,8 @@ import { NewActivityData } from "../../Type/data/UserActivity";
 /**
  * Function - Custom tool tip
  * @param {TooltipProps<ValueType, NameType>} Props
- * @param {boolean | undefined} Props.active
- * @param {Payload<ValueType, NameType>[] | undefined} Props.payload
+ * @param {boolean | undefined} Props.active - if user hover on the chart
+ * @param {Payload<ValueType, NameType>[] | undefined} Props.payload - value of element when user hover the chart
  * @return {JSX.Element | null}
  */
 const CustomTooltip = ({
@@ -43,7 +43,7 @@ const CustomTooltip = ({
 /**
  * React component - Display bar chart
  * @param {DisplayBarProptype} Props
- * @param {ActivityType | null} Props.data
+ * @param {ActivityType | null} Props.data - activity data fetch in service
  * @return {JSX.Element}
  */
 const DisplayBar = ({ data }: DisplayBarProptype): JSX.Element => {

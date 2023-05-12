@@ -15,12 +15,13 @@ import { DisplayRadialProptype } from "../../Type/proptype/PropTypes";
 /**
  * Function - Custom legend
  * @param {TooltipProps<ValueType, NameType>} Props
- * @param {Payload<ValueType, NameType>[] | undefined} Props.payload
+ * @param {Payload<ValueType, NameType>[] | undefined} Props.payload - value of element
  * @return {JSX.Element | null}
  */
 const CustomizedLegend = ({
   payload,
 }: TooltipProps<ValueType, NameType>): JSX.Element | null => {
+  console.log(payload)
   if (payload && payload.length) {
     return (
       <div className="custom-legend">
@@ -37,9 +38,9 @@ const CustomizedLegend = ({
 };
 
 /**
- *
+ * React component - Display radial chart
  * @param {DisplayRadialProptype} Props
- * @param {MainType | null} Props.data
+ * @param {MainType | null} Props.data - main data fetch in service
  * @return {JSX.Element}
  */
 const DisplayRadial = ({ data }: DisplayRadialProptype): JSX.Element => {

@@ -13,7 +13,7 @@ const DisplayAverageData = (): JSX.Element => {
   const [data, setData] = useState<null | AverageSessionsType>(null);
   return (
     <>
-      <GetDataAverageSessions data={setData} userId={Number(id)} />
+      <GetDataAverageSessions setData={setData} userId={Number(id)} />
       {data != null && <DisplayLine data={data} />}
     </>
   );

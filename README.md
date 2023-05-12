@@ -3,17 +3,30 @@
 [![forthebadge](https://forthebadge.com/images/badges/made-with-typescript.svg)](https://forthebadge.com)
 [![forthebadge](/make-react.svg)](https://forthebadge.com)
 
+# Description 
+
+SportSee is an application that allows the user to track the number of workout sessions completed as well as the number of calories burned. Here, we have several charts to display all of the user's data such as daily activities, average session durations, performance, and average score.\
+Here, we use the [Recharts](https://recharts.org/en-US/) dependency to create the charts, which allows us to create many different styles of graphs.\
+Currently, only the home page and dashboard are functional. The Profil, Réglages, and Communauté pages are currently under construction.
+
 # Prerequisites
 
-Node - v20.0.0\
-NPM - v9.6.4 or YARN\
-git - v2.40.0
+- Node - v20.0.0\
+- NPM - v9.6.4 or YARN\
+- git - v2.40.0
 
 # Backend
 
+## Dependencies
+
+- `cors: ^2.8.5`\
+- `express: ^4.17.1`\
+- `idx: ^2.5.6`\
+- `nodemon: ^2.0.4`
+
 ## Install
 
-For install backend you need to follow the steps in this repository :\
+- For install backend you need to follow the steps in this repository :\
 https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard
 
 ## Use
@@ -22,21 +35,42 @@ First you need to change in app/index.js, `const port = 3000` to `const port = 3
 For use backend you need to run :\
 `npm run dev`\
 And you can use postman for test many endpoints with two users :\
--http://localhost:3001/user/12 \
--http://localhost:3001/user/18 
+- http://localhost:3001/user/12 \
+- http://localhost:3001/user/18 
 
 # Frontend
 
+## Dependencies
+
+- `@testing-library/jest-dom: ^5.16.5`\
+- `@testing-library/react: ^13.4.0`\
+- `@testing-library/user-event: ^13.5.0`\
+- `@types/jest: ^27.5.2`\
+- `@types/node: ^16.18.23`\
+- `@types/react: ^18.0.35`\
+- `@types/react-dom: ^18.0.11`\
+- `prop-types: ^15.8.1`\
+- `react: ^18.2.0`\
+- `react-dom: ^18.2.0`\
+- `react-router-dom: ^6.10.0`\
+- `react-scripts: 5.0.1`\
+- `recharts: ^2.5.0`\
+- `sass: ^1.62.0`\
+- `typescript: ^4.9.5`\
+- `web-vitals: ^2.1.4`
+
 ## Install
 
-For install frontend, you can clone this repository with this command :\
-git clone https://github.com/thomasop/sportsee.git
+- For install frontend, you can clone this repository with this command :\
+`git clone https://github.com/thomasop/sportsee.git`
+- go to the project folder `cd sportsee`
+- install the packages `npm install` or `yarn install`
 
-## Available Scripts
+## Use
 
 In the project directory, you can run:
 
-### `npm start`
+`npm start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
@@ -44,41 +78,26 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-### `npm test`
+# Use the app
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Use Mock data
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-# Backend and frontend
-
-## Use
-
--For use Frontend with Backend, Backend need to be start with :\
-`npm run dev`\
--You can change in .env file in Frontend the source data (mock or api)\
--Frontend need to be start with :\
+- For use this app with Mock data, you need to put env variable in .env file : `REACT_APP_SOURCE = mock`\
+- Frontend need to be start with :\
 `npm run start`\
--You can open browser on :\
+- You can open browser on :\
+http://localhost:3000
+
+## Use API data
+
+- First you need to change in app/index.js in backend, `const port = 3000 to const port = 3001`
+- For use this app with API data, Backend need to be start with :\
+`npm run dev`\
+- you need to put env variable in .env file : 
+`REACT_APP_SOURCE = api`\
+- Frontend need to be start with :\
+`npm run start`\
+- You can open browser on :\
 http://localhost:3000
 
 # Learn More

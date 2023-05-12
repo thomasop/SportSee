@@ -17,7 +17,7 @@ let ar: string[][] = [
 /**
  * React component - Get main data from service and display main data, radial chart or keyData
  * @param {DisplayMainDataProptype} Props
- * @param {string} Props.type
+ * @param {string} Props.type - for display text, keyData or chart
  * @return {JSX.Element}
  */
 const DisplayMainData = ({ type }: DisplayMainDataProptype): JSX.Element => {
@@ -71,7 +71,7 @@ const DisplayMainData = ({ type }: DisplayMainDataProptype): JSX.Element => {
   };
   return (
     <>
-      <GetDataMain data={setData} userId={Number(id)} />
+      <GetDataMain setData={setData} userId={Number(id)} />
       {data != null && display()}
     </>
   );

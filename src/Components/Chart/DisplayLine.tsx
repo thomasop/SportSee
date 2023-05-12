@@ -18,14 +18,15 @@ import { DisplayLineProptype } from "../../Type/proptype/PropTypes";
 /**
  * Function - Custom tool tip
  * @param {TooltipProps<ValueType, NameType>} Props
- * @param {boolean | undefined} Props.active
- * @param {Payload<ValueType, NameType>[] | undefined} Props.payload
+ * @param {boolean | undefined} Props.active - if user hover on the chart
+ * @param {Payload<ValueType, NameType>[] | undefined} Props.payload - value of element when user hover the chart
  * @return {JSX.Element | null}
  */
 const CustomTooltip = ({
   active,
   payload,
 }: TooltipProps<ValueType, NameType>): JSX.Element | null => {
+  console.log(payload)
   if (active && payload && payload.length) {
     if (payload[0].payload.id !== "") {
       let test = Number(payload[0].value) + 60;
@@ -89,7 +90,7 @@ const CustomTooltip = ({
 /**
  * React component - Display line chart
  * @param {DisplayLineProptype} Props
- * @param {null | AverageSessionsType} Props.data
+ * @param {null | AverageSessionsType} Props.data - average sessions data fetch in service
  * @return {JSX.Element}
  */
 const DisplayLine = ({ data }: DisplayLineProptype): JSX.Element => {

@@ -13,7 +13,7 @@ const DisplayActivityData = (): JSX.Element => {
   const [data, setData] = useState<null | ActivityType>(null);
   return (
     <>
-      <GetDataActivity data={setData} userId={Number(id)} />
+      <GetDataActivity setData={setData} userId={Number(id)} />
       {data != null && <DisplayBar data={data} />}
     </>
   );

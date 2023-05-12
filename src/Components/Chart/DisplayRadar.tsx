@@ -12,7 +12,7 @@ import { NewPerformanceData } from "../../Type/data/UserPerformance";
 /**
  * React component - Display radar chart
  * @param {DisplayRadarProptype} Props
- * @param {PerformanceType | null} Props.data
+ * @param {PerformanceType | null} Props.data - performance data fetch in service
  * @return {JSX.Element}
  */
 const DisplayRadar = ({ data }: DisplayRadarProptype): JSX.Element => {

@@ -31,7 +31,7 @@ const Header = (): JSX.Element => {
           </li>
           <li className="header__li">
             <Link className="header__a" to="/community">
-              Communité
+              Communauté
             </Link>
           </li>
         </ul>

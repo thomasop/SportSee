@@ -13,7 +13,7 @@ const DisplayPerformanceData = (): JSX.Element => {
   const [data, setData] = useState<null | PerformanceType>(null);
   return (
     <>
-      <GetDataPerformance data={setData} userId={Number(id)} />
+      <GetDataPerformance setData={setData} userId={Number(id)} />
       {data != null && <DisplayRadar data={data} />}
     </>
   );

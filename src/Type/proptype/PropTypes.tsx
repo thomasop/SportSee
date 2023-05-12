@@ -5,19 +5,19 @@ import { MainType } from "../data/UserMain";
 import { PerformanceType } from "../data/UserPerformance";
 
 export interface UserActivityPropType {
-  data: Dispatch<SetStateAction<ActivityType | null>>;
+  setData: Dispatch<SetStateAction<ActivityType | null>>;
   userId: number;
 }
 export interface UserAverageSessionsPropType {
-  data: Dispatch<SetStateAction<null | AverageSessionsType>>;
+  setData: Dispatch<SetStateAction<null | AverageSessionsType>>;
   userId: number;
 }
 export interface UserMainPropType {
-  data: Dispatch<SetStateAction<null | MainType>>;
+  setData: Dispatch<SetStateAction<null | MainType>>;
   userId: number;
 }
 export interface UserPerformancePropType {
-  data: Dispatch<SetStateAction<null | PerformanceType>>;
+  setData: Dispatch<SetStateAction<null | PerformanceType>>;
   userId: number;
 }
 
