@@ -26,7 +26,6 @@ const CustomTooltip = ({
   active,
   payload,
 }: TooltipProps<ValueType, NameType>): JSX.Element | null => {
-  console.log(payload)
   if (active && payload && payload.length) {
     if (payload[0].payload.id !== "") {
       let test = Number(payload[0].value) + 60;
